@@ -1,11 +1,114 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
-.aspect-ratio {
+body {
+    background-color: red;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#root {
+    background-color: #2d2da1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* .aspect-ratio {
     margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     aspect-ratio: 16/10;
+} */
+
+.video-form-container {
+    position: relative;
+    height: 100%;
+}
+
+.video-form-div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.thumb-size {
+    font-size: 6rem;
+}
+
+.thumb-up,
+.thumb-down {
+    color: white;
+    animation: thumb-move 3s;
+    animation-fill-mode: forwards;
+}
+
+.thumb-up-display-none,
+.thumb-down-display-none {
+    display: none;
+}
+
+#thumb-up-button,
+#thumb-down-button {
+    background-color: transparent;
+    border: none;
+}
+
+#thumb-up-button:focus,
+#thumb-down-button:focus {
+    /* border: none;
+    outline: none; */
+    box-shadow: none;
+}
+
+.thumb-up-color {
+    color: limegreen;
+    border: none;
+}
+
+.thumb-down-color {
+    color: red;
+    border: none;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes thumb-move {
+    from {
+        margin-bottom: 0rem;
+        opacity: 1;
+    }
+    to {
+        margin-bottom: 10rem;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .thumb-size {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .thumb-size {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-form-div {
+        position: relative;
+    }
 }
