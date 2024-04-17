@@ -14,7 +14,7 @@ function App() {
         if (videoID != null) {
             srcLink = "https://www.youtube.com/embed/" + videoID;
         } else {
-            srcLink = "https://www.youtube.com/embed/r4_JbG7TSgQ";
+            srcLink = "https://www.youtube.com/embed/wjhxTWdqZVQ";
         }
 
         return srcLink;
